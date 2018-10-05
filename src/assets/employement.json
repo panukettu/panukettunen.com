@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "jobTitle": "Meat factory worker, logistics worker",
+    "employee": "HK Ruokatalo Oy",
+    "yearStart": "2009",
+    "yearEnd": "2010",
+    "jobDescription": "Summer worker and temporary afterwards."
+  },
+  {
+    "id": 1,
+    "jobTitle": "Cleaner",
+    "employee": "L&T Oy",
+    "yearStart": "2010",
+    "yearEnd": "2012",
+    "jobDescription": "A side job while studying."
+  },
+  {
+    "id": 2,
+    "jobTitle": "Developer (intern)",
+    "employee": "Mtech Digital Solutions Oy",
+    "yearStart": "2014",
+    "yearEnd": "2014",
+    "jobDescription": "Internship for school, mostly small tasks and learning C#."
+  },
+  {
+    "id": 3,
+    "jobTitle": "Developer",
+    "employee": "Mtech Digital Solutions Oy",
+    "yearStart": "2014",
+    "yearEnd": "2018",
+    "jobDescription": "Creating and maintaining a large scale full-stack application with ASP.NET MVC and AngularJS. Also did many smaller side-projects with the same stack."
+  },
+  {
+    "id": 4,
+    "jobTitle": "Developer (corresponding)",
+    "employee": "Mtech Digital Solutions Oy",
+    "yearStart": "2018",
+    "yearEnd": "Current",
+    "jobDescription": "Added responsibility for projects involved."
+  }
+]

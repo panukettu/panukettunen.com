@@ -1,0 +1,19 @@
+[
+  {
+    "id": 0,
+    "title": "General",
+    "skills": [
+      "Great english skills",
+      "Good teamplayer with positive attitude",
+      "Motivated to learn"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "As developer",
+    "skills": [
+      "JavaScript - ES2018, AngularJS, React",
+      "Others - C#, SQL, REST, Scrum"
+    ]
+  }
+]

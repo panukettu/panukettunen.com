@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "type": "High School",
+    "name": "Lumon Lukio",
+    "yearStart": "2006",
+    "yearEnd": "2009",
+    "addInfo": "Finnish Matriculation Examination",
+    "completed": true
+  },
+  {
+    "id": 1,
+    "type": "University of Applied Sciences",
+    "name": "Haaga-Helia Pasila",
+    "yearStart": "2011",
+    "yearEnd": "2016",
+    "addInfo": "Bachelor of Business Information Technology",
+    "completed": false
+  }
+]
