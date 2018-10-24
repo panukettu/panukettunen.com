@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import { rhythm } from '../../utils/typography'
 
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import Resume from '../../components/Resume'
 
 // if (typeof window !== `undefined`) {
@@ -28,7 +28,6 @@ class PortfolioIndex extends React.Component {
           title={siteTitle}
         />
         <div>
-          <h3>Short story</h3>
           <p>
             My first impressions about web development date back to 2005, when I
             was fiddling around with Microsoft FrontPage, creating some simple

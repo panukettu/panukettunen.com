@@ -6,7 +6,7 @@ import 'typeface-merriweather'
 
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
-import EmojiLink from './Link'
+import { EmojiLink } from './Links'
 
 class Bio extends React.Component {
   render() {
