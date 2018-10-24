@@ -23,11 +23,12 @@ const Resume = ({ print }) => (
           style={{
             margin: rhythm(1),
           }}
+          key={skill.id}
         >
           <h4>{skill.title}</h4>
           <ul>
             {skill.skills.map(i => (
-              <li>{i}</li>
+              <li key={i}>{i}</li>
             ))}
           </ul>
         </li>

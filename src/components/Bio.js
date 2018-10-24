@@ -35,7 +35,7 @@ class Bio extends React.Component {
           <br />
           <br />
           <EmojiLink emoji="⏩" to="me" style={{ textDecoration: 'none' }}>
-            More info
+            Read more
           </EmojiLink>
         </p>
       </div>

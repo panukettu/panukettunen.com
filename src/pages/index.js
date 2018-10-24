@@ -14,10 +14,8 @@ class Index extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     )
-    console.log(this.props)
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    // const allMdx = get(this, 'props.data.allMdx.edges')
-    // const posts = [...allMarkdownRemark, ...allMdx]
+    // const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const posts = []
 
     return (
       <Layout location={this.props.location}>
@@ -74,6 +72,7 @@ export const pageQuery = graphql`
         }
       }
     }
+    # TODO: convert .md files to .mdx!
     # allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
     #   edges {
     #     node {

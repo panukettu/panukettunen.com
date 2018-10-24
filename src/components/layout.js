@@ -1,56 +1,37 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { rhythm, scale } from '../utils/typography'
+import { rhythm } from '../utils/typography'
+
+import Title from './Title'
+import { NavLink } from './NavLink'
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath || location.pathname === '/me') {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {location.pathname === '/' ? '/index' : location.pathname}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {location.pathname === '/' ? '/index' : location.pathname}
-          </Link>
-        </h3>
-      )
-    }
+    let header = (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          paddingRight: rhythm(2),
+        }}
+      >
+        <Title
+          renderBig={location.pathname === '/' || location.pathname === '/me'}
+          text={location.pathname}
+        />
+        <div>
+          <ul>
+            <li>
+              <NavLink to="/">index</NavLink>
+            </li>
+            <li>
+              <NavLink to="/me">me</NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    )
     return (
       <div
         style={{
