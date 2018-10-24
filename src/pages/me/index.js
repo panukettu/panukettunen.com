@@ -7,9 +7,10 @@ import Layout from '../../components/layout'
 
 import Resume from '../../components/Resume'
 
-import jsPDF from 'jspdf'
-import html2canvas from 'html2canvas'
-import { rhythm } from '../../utils/typography'
+// TODO: Mock window somehow for jsPDF so gatsby deploy wont crash..
+// import jsPDF from 'jspdf'
+// import html2canvas from 'html2canvas'
+// import { rhythm } from '../../utils/typography'
 
 class PortfolioIndex extends React.Component {
   render() {
@@ -48,7 +49,7 @@ class PortfolioIndex extends React.Component {
             I enjoy working with JavaScript. My focus is mostly on the
             React-ecosystem.
           </p>
-          <Export />
+          {/* <Export /> */}
           <Resume />
         </div>
       </Layout>
@@ -85,43 +86,43 @@ export const pageQuery = graphql`
   }
 `
 
-class Export extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+// class Export extends React.Component {
+//   constructor(props) {
+//     super(props)
+//   }
 
-  printDocument(element) {
-    const input = document.getElementById('divToPrint')
-    input.style.display = ''
-    html2canvas(input).then(canvas => {
-      input.style.display = 'none'
-      const imgData = canvas.toDataURL('image/png')
-      const pdf = new jsPDF()
-      pdf.addImage(imgData, 'JPEG', 0, 0)
-      pdf.save('resume.pdf')
-    })
-  }
+//   printDocument(element) {
+//     const input = document.getElementById('divToPrint')
+//     input.style.display = ''
+//     html2canvas(input).then(canvas => {
+//       input.style.display = 'none'
+//       const imgData = canvas.toDataURL('image/png')
+//       const pdf = new jsPDF()
+//       pdf.addImage(imgData, 'JPEG', 0, 0)
+//       pdf.save('resume.pdf')
+//     })
+//   }
 
-  render() {
-    return (
-      <div>
-        <button
-          style={{
-            backgroundColor: '#002a28',
-            color: 'white',
-            border: 'none',
-            margin: rhythm(1 / 2),
-          }}
-          onClick={this.printDocument}
-        >
-          💾 Save as pdf
-        </button>
-        <div id="divToPrint" style={{ display: 'none' }}>
-          <div>
-            <Resume print={true} />
-          </div>
-        </div>
-      </div>
-    )
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <button
+//           style={{
+//             backgroundColor: '#002a28',
+//             color: 'white',
+//             border: 'none',
+//             margin: rhythm(1 / 2),
+//           }}
+//           onClick={this.printDocument}
+//         >
+//           💾 Save as pdf
+//         </button>
+//         <div id="divToPrint" style={{ display: 'none' }}>
+//           <div>
+//             <Resume print={true} />
+//           </div>
+//         </div>
+//       </div>
+//     )
+//   }
+// }
