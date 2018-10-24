@@ -3,7 +3,7 @@ module.exports = {
     title: 'pk',
     author: 'panu kettunen',
     description: 'portfolio/cv/blog/ platform for myself.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    siteUrl: 'https://panukettunen.com',
   },
   pathPrefix: '/blog',
   plugins: [
