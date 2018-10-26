@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "panukettunen.com",
+  "description": "PANUS GREAT WEBSITE",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Panu Kettunen <panu.t.kettunen@gmail.com",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/panukettu/panukettunen.com/issues"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.15.5",
@@ -49,15 +49,20 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://panukettunen.com",
   "keywords": [
-    "gatsby"
+    "panu",
+    "kettunen",
+    "panukettunen",
+    "programming",
+    "javascript",
+    "react"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/panukettu/panukettunen.com"
   },
   "scripts": {
     "dev": "gatsby develop",

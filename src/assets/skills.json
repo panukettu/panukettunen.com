@@ -4,16 +4,17 @@
     "title": "General",
     "skills": [
       "Great English skills",
-      "Good team player with positive attitude",
-      "Motivated to learn"
+      "Good team player with a positive attitude",
+      "Constantly learning about new stuff"
     ]
   },
   {
     "id": 1,
-    "title": "As developer",
+    "title": "Development skills",
     "skills": [
-      "JavaScript - ES2018, AngularJS, React",
-      "Others - C#, SQL, REST, Scrum"
+      "Languages: C#, SQL, Javascript (ES2018, AngularJS, React, Webpack)",
+      "Other stuff: REST, Scrum",
+      "What's next: Redux, GraphQL, Elm"
     ]
   }
 ]

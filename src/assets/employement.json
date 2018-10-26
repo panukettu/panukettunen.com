@@ -21,7 +21,7 @@
     "employee": "Mtech Digital Solutions Oy",
     "yearStart": "2014",
     "yearEnd": "2014",
-    "jobDescription": "Internship for school, mostly small tasks and learning C#."
+    "jobDescription": "Internship for school, mostly small tasks like fixing bugs, doing documentation and learning C#."
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "employee": "Mtech Digital Solutions Oy",
     "yearStart": "2014",
     "yearEnd": "2018",
-    "jobDescription": "Creating and maintaining a large scale full-stack application with ASP.NET MVC and AngularJS. Also did many smaller side-projects with the same stack."
+    "jobDescription": "Maintaining a large scale application with MSSQL, ASP.NET MVC and AngularJS. Designed and created a WebApi and a lite progressive web app version of the main application with AngularJS which is targeted towards mobile devices. Also did many smaller mobile side-projects with AngularJS. Had a lot of responsibility from the beginning and a lot of interaction with clients."
   },
   {
     "id": 4,
@@ -37,6 +37,6 @@
     "employee": "Mtech Digital Solutions Oy",
     "yearStart": "2018",
     "yearEnd": "Current",
-    "jobDescription": "Added responsibility for projects involved."
+    "jobDescription": "Added responsibility."
   }
 ]

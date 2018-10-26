@@ -4,7 +4,7 @@ import React from 'react'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from './profile-pic.jpg'
+import MEITSI from './MEITSI2.png'
 import { rhythm } from '../utils/typography'
 import { EmojiLink } from './Links'
 
@@ -18,13 +18,15 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={profilePic}
+          src={MEITSI}
           alt={`Me`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
+            width: rhythm(3),
+            height: rhythm(4.5),
+            borderRadius: '1px 25px',
+            boxShadow: '1px 1px 3px black',
           }}
         />
         <p>

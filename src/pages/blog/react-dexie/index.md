@@ -7,29 +7,20 @@ shortdesc: react
 
 Hi!
 
-```javascript
-class Me extends React.Component {
-  state = {
-    location: 'Northern Canada',
-    altitude: '11000m',
-    speed: '950km/h',
-    destination: 'Los Angeles',
-  }
-  ...
-}
-```
+I'm currently flying from Stockholm to Los Angeles and thought to myself: Could there be a better place in space and time to write a post and learn about how to use IndexedDB with React? I think not.
 
-Could there be a better place in space and time to write a post about how to use IndexedDB with React? I think not.
-
-At work we have been using IndexedDB as a main data source for an application running on AngularJS and I have been playing with the thought of porting parts of it to React so I think it's time to find out how the combination works together small scale.
+At work we have been using IndexedDB as a main data source for an web application and I have been thinking about porting parts of the application to React so I think it's time to find out how the combination works together small scale.
 
 ## Project
 
 User of the app can do the following:
 
-- Can add a todo
-- Can delete a todo
-- Can toggle the completed status of todo
+- Add a todo
+- Delete a todo
+- Toggle the completed status of todo
+
+Also importantly:
+
 - Todos will be on sync and persisted with the IndexedDB.
 
 ## Setup
@@ -60,31 +51,26 @@ With IndexedDB you'll have every version of the database living inside the datab
 
 The store schema will be defined as object with keys as the store names and the store fields will be the value as a comma-separated string.
 
-The fields we define in the schema will be indexed. So here we only index our id field. We can still add rest the data for the row, it just wont be indexed.
-
 ```javascript
+// db.js
 import Dexie from 'dexie'
 const db = new Dexie('TodoDB')
 db.version(1).stores({ todos: '++id' })
-// db.version(2).stores({ todos: '++id, text'}) -- if we wanted to index
+// db.version(2).stores({ todos: '++id, field}) -- if we wanted add an index to 'field'
 export default db
 ```
+
+The fields we define in the schema will be indexed. So here we only index our id field. We can still add rest the data for the row, it just wont get indexed.
 
 ### Prepare our React-component
 
 Before we deal with the database lets prepare the App-component of create-react-app for our needs.
 
-A todo app will render a list of todos, which will initially be empty, so let's add that to our applications state.
-
-Also, get rid of unnecessary stuff in the component.
-
 ```javascript
+// App.js
 class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      todos: [],
-    }
+  state = {
+    todos: [],
   }
 
   render() {
@@ -99,6 +85,8 @@ class App extends React.Component {
 }
 ```
 
+A todo app will render a list of todos, which will initially be empty, so we set that as the initial state and removed some unnecessary ui.
+
 ### Using the database in React
 
 Cool! Now that we have a ready-to-use database in our hands and some state for our todos let's bring the database in to play.
@@ -112,6 +100,8 @@ Working with IndexedDB is gonna be asynchronous so using the Async/Await-syntax 
 To make sure our application state is in sync at first render, we will list all todos from the store when the application mounts.
 
 ```javascript
+// App.js
+...
 async componentDidMount() {
     try {
         const todos = await db.table("todos").toArray();
@@ -121,26 +111,30 @@ async componentDidMount() {
     }
 ```
 
-Notice the async marker added for componentDidMount() - it will do no harm since the componentDidMount lifecycle method returns void.
+Notice the async marker added for componentDidMount() - it's safe to do since it returns nothing.
 
 ### Mock some data and render it
 
 Let's create some mock data in `db.js` so we can render some ui
 
 ```javascript
+// db.js
+...
 db.table('todos').add({ title: 'Write a blogpost', completed: false })
 db.table('todos').add({ title: 'Learn to fly', completed: false })
 ```
 
-To create the DOM for the todos, we will create a stateless list component which maps over the todos.
+To create the DOM for the todos, we will create a stateless ui component in `src/TodoList.js` which maps over the todos we pass as props.
 
 ```javascript
+// TodoList.js
 const TodoList = ({ todos }) => (
   <ul>
     {todos.map(todo => (
       <li
+        key={todo.id}
         style={{
-          textDecoration: todo.completed ? 'line-through' : 'none',
+          textDecoration: completed ? 'line-through' : 'none',
         }}
       >
         {todo.title}
@@ -149,7 +143,13 @@ const TodoList = ({ todos }) => (
   </ul>
 )
 
-// App.render()
+export default TodoList
+```
+
+```javascript
+// App.js
+import TodoList from './TodoList'
+...
 return (
   <div className="App">
     <div className="App-header">
@@ -163,13 +163,28 @@ return (
 Great, we can now see our data in the page!
 But the spec said we have to be able to toggle the completed status and delete the item aswell, so guess we'll implement it next.
 
-## Implementing toggle and delete
+## Implementing events
 
-Since it's good habit to keep your UI components simple and sober from the allmighty business logic, let's implement the logic in the main `<App/>` component.
+We want to keep the ui-components dumb so logic will reside in the main App-component. The handlers will be passed down as props.
+
+## Add
+
+```javascript
+// App.js
+async handleAdd = title => {
+  try {
+    const todo = {
+      title,
+      completed: false,
+    }
+    const id = await db.table('todos').add(todo)
+    const newList = [...this.state.todos, {...todo, id}];
+    this.setState({ todos: newList });
+  }
+}
+```
 
 ### Delete
-
-Easier one to implement:
 
 - Create a handler method which takes the todo id as an argument.
 - Delete the todo from the database
@@ -177,7 +192,7 @@ Easier one to implement:
 - Update state with the new filtered array
 
 ```javascript
-// App-component
+// App.js
 async handleDelete = id => {
     try {
         const { todos } = this.state;
@@ -199,6 +214,7 @@ A bit more complexity here:
 - Update the state with the new array
 
 ```javascript
+// App.js
 async handleToggleTodo(id) {
     try {
         const { todos } = this.state;
@@ -219,9 +235,92 @@ async handleToggleTodo(id) {
 Now that we have our methods for the actions, let's make them accessible for the list component by passing them as a a prop:
 
 ```javascript
+//App.js
+...
 <TodoList
   todos={todos}
   handleDelete={this.handleDelete}
   handleToggle={this.handleToggle}
 />
 ```
+
+Finally we need to up our presentation of a Todo-item a bit, so let's create a React component for it in `src/Todo.js`
+
+```javascript
+//Todo.js
+const Todo = ({ handleDelete, handleToggle, id, title, completed }) => (
+  <li
+    key={id}
+    style={{
+      textDecoration: completed ? 'line-through' : 'none',
+    }}
+    onClick={() => handleToggle(id)}
+  >
+    {title}
+    <button type="button" onClick={() => handleDelete(id)}>
+      x
+    </button>
+  </li>
+)
+
+export default Todo
+```
+
+Let's updatethe TodoList to render a array of todos.
+
+```javascript
+// TodoList.js
+import Todo from './Todo'
+
+const TodoList = ({ todos, handleDelete, handleToggle }) => (
+  <ul>
+    {todos.map(todo => (
+      <Todo {...todo} handleDelete={handleDelete} handleToggle={handleToggle}/>
+    ))}
+  </ul>
+```
+
+We still need a way to add our todos, so let's make a component for that aswell in `src/AddTodo.js`
+
+```javascript
+//AddTodo.js
+class AddTodo extends React.Component {
+  state = {
+    inputValue: '',
+  }
+  handleChange = e => this.setState({ inputValue: e.target.value })
+
+  handleAdd = () => this.props.handleAdd(this.state.inputValue)
+
+  render() {
+    const { inputValue } = this.state
+    return (
+      <div>
+        <input type="text" value={inputValue} onChange={this.handleChange} />
+        <button type="button" onClick={this.handleAdd}>
+          Add
+        </button>
+      </div>
+    )
+  }
+}
+```
+
+Lets update our App component with it
+
+```javascript
+// App.js
+import AddTodo from './AddTodo'
+...
+return (
+  <div className="App">
+    <div className="App-header">
+      <h2>React + Dexie Todo Example</h2>
+    </div>
+    <AddTodo handleAdd={this.handleAdd}/>
+    <TodoList todos={todos} />
+  </div>
+)
+```
+
+There it is folks.
