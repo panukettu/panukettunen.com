@@ -4,7 +4,7 @@ import React from 'react'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import MEITSI from './MEITSI2.png'
+import MEITSI from '../assets/meitsi2.png'
 import { rhythm } from '../utils/typography'
 import { EmojiLink } from './Links'
 

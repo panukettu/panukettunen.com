@@ -3,7 +3,7 @@ import iconGithub from '../assets/icon-github.png'
 import iconSoundcloud from '../assets/icon-soundcloud.png'
 import iconLinkedIn from '../assets/icon-linkedin.png'
 import iconTwitter from '../assets/icon-twitters.png'
-import './icon.css'
+import '../assets/icon.css'
 
 const Icons = () => {
   return (
