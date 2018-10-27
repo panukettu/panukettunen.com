@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout'
 import Resume from '../../components/Resume'
 
 // if (typeof window !== `undefined`) {

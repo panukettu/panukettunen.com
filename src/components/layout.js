@@ -2,7 +2,6 @@ import React from 'react'
 import { rhythm } from '../utils/typography'
 
 import Header from './Header'
-import Icons from './Icons'
 
 class Layout extends React.Component {
   render() {
