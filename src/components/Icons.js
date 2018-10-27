@@ -9,13 +9,17 @@ const Icons = () => {
   return (
     <div
       style={{
+        position: 'relative',
+        top: '0px',
+        right: '0px',
         display: 'flex',
         flexDirection: 'row',
-        opacity: 0.7,
+        justifyContent: 'flex-start',
+        padding: '5px',
       }}
     >
       <Icon src={iconGithub} url="https://github.com/panukettu" />
-      <Icon src={iconTwitter} url="https://twitter.com/panukettu" height="25" />
+      <Icon src={iconTwitter} url="https://twitter.com/panukettu" />
       <Icon
         src={iconLinkedIn}
         url="https://www.linkedin.com/in/panu-kettunen-06617b118/"
@@ -24,17 +28,16 @@ const Icons = () => {
     </div>
   )
 }
-const Icon = ({ url, src, height }) => {
+const Icon = ({ url, src, height = 20 }) => {
   return (
     <div
       className="icon"
       style={{
-        margin: '4px',
-        padding: '9px',
+        marginRight: '25px',
       }}
     >
       <a target="_blank" href={url}>
-        <img src={src} height={height || 22} />
+        <img src={src} height={height} />
       </a>
     </div>
   )

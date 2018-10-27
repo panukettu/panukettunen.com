@@ -5,3 +5,7 @@
 .icon:hover {
   opacity: 1;
 }
+
+.icon-title:visited {
+  color: black;
+}

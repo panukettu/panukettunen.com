@@ -1,6 +1,7 @@
 import React from 'react'
 import { rhythm } from '../utils/typography'
-import Sticky from '../components/Sticky'
+import Icons from '../components/Icons'
+
 const NotFoundPage = () => (
   <div
     style={{
@@ -13,7 +14,7 @@ const NotFoundPage = () => (
       minHeight: '100vmin',
     }}
   >
-    <Sticky />
+    <Icons />
     <h1>NOT FOUND</h1>
     <p>better luck next time :O</p>
   </div>
