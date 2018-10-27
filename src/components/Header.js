@@ -60,10 +60,24 @@ const Header = ({ location }) => (
           }}
         >
           <li>
-            <NavLink to="/">index</NavLink>
+            <NavLink
+              to="/"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              ⏮ index
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/me">me</NavLink>
+            <NavLink
+              to="/me"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              🐱💻 me
+            </NavLink>
           </li>
         </ul>
       </div>

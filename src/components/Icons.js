@@ -16,6 +16,8 @@ const Icons = () => {
         flexDirection: 'row',
         justifyContent: 'flex-start',
         padding: '5px',
+        marginBottom: '15px',
+        height: '15px',
       }}
     >
       <Icon src={iconGithub} url="https://github.com/panukettu" />
