@@ -1,9 +1,21 @@
 import React from 'react'
-
+import { rhythm } from '../utils/typography'
+import Sticky from '../components/Sticky'
 const NotFoundPage = () => (
-  <div>
+  <div
+    style={{
+      backgroundColor: 'white',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      maxWidth: rhythm(32),
+      padding: `0px ${rhythm(1.5)} ${rhythm(3 / 4)}`,
+      boxShadow: '3px 3px 3px',
+      minHeight: '100vmin',
+    }}
+  >
+    <Sticky />
     <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <p>better luck next time :O</p>
   </div>
 )
 

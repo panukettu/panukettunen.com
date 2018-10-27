@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import { rhythm } from '../../utils/typography'
 
 import Layout from '../../components/Layout'
 import Resume from '../../components/Resume'

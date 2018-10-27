@@ -14,8 +14,7 @@ class Index extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     )
-    // const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    const posts = []
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <Layout location={this.props.location}>
