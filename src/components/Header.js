@@ -3,6 +3,7 @@ import { NavLink } from './Links'
 import Title from './Title'
 import Icons from './Icons'
 import { rhythm } from '../utils/typography'
+import ScrollProvider from './ScrollProvider'
 
 const Header = ({ location }) => (
   <>
@@ -19,14 +20,17 @@ const Header = ({ location }) => (
       <span
         className="icon-title"
         style={{
-          fontSize: '8',
-          lineHeight: '22px',
+          fontSize: '9',
+          lineHeight: '24px',
           fontWeight: 'bold',
           textDecoration: 'none',
           cursor: 'pointer',
         }}
         onClick={() => window.scrollTo(0, 0)}
       >
+        <ScrollProvider>
+          {({ scrollY }) => (scrollY > 150 ? '⏫ ' : '')}
+        </ScrollProvider>
         panukettunen.com
       </span>
     </div>
