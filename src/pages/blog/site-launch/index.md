@@ -1,5 +1,5 @@
 ---
-title: Back from the USA! Also, site launch party.
+title: Back from the USA! Also, a site launch party.
 date: '2018-10-27'
 section: blog
 shortdesc: general
@@ -33,4 +33,4 @@ Some stuff like comments on my posts I have yet to do research on how to impleme
 
 I already tried creating some components with the new React 16.7 [hooks](https://reactjs.org/docs/hooks-intro.html) for the site, but for some reason the new lifecycle-method replacement hook `useEffect()` won't get called in my functional components at all, so I gave up for now. Hope they'll be working soon because it looks like an awesome change to me!
 
-But that's enough for this time, I'll write again in the near future! 😎
+But that's enough for this time. I have a tutorial post about using IndexedDB with React I wrote while flying but it's not finalized yet, maybe I'll rewrite it to use hooks, so talk to you when it's ready! 😎
