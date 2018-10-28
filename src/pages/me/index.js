@@ -2,16 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import { rhythm } from '../../utils/typography'
 
 import Layout from '../../components/layout'
 import Resume from '../../components/Resume'
-
-// if (typeof window !== `undefined`) {
-//   import('jsPDF').then(jsPDF => (jsPDF = jsPDF))
-//   import('html2canvas').then(html2canvas => (html2canvas = html2canvas))
-// }
+// import jsPDF from 'jspdf'
+// import html2canvas from 'html2canvas'
 
 class PortfolioIndex extends React.Component {
+  state = {
+    showCv: false,
+  }
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -26,7 +27,9 @@ class PortfolioIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
+        {/* <Export /> */}
         <div>
+          <h3>Short story</h3>
           <p>
             My first impressions about web development date back to 2005, when I
             was fiddling around with Microsoft FrontPage, creating some simple
@@ -39,16 +42,32 @@ class PortfolioIndex extends React.Component {
             for the web is what I like and should be doing.
           </p>
           <p>
-            Through the school I got accepted as an intern to my current company
-            where I have been working since doing closed source stuff for
-            various clients.
+            I got accepted as an intern to my current company in 2014 where I
+            have been working since doing closed source stuff for various
+            clients.
           </p>
           <p>
             I enjoy working with JavaScript. My focus is mostly on the
             React-ecosystem.
           </p>
-          {/* <Export /> */}
-          <Resume />
+          <p>
+            You can check out my{' '}
+            <a
+              style={{
+                textDecoration: 'underline',
+                cursor: 'pointer',
+              }}
+              onClick={() =>
+                this.setState(({ showCv }) => ({ showCv: !showCv }))
+              }
+              download
+            >
+              mini resume
+            </a>{' '}
+            or request a proper one from panu.t.kettunen@gmail.com!
+          </p>
+
+          {this.state.showCv && <Resume />}
         </div>
       </Layout>
     )
@@ -115,7 +134,7 @@ export const pageQuery = graphql`
 //         >
 //           💾 Save as pdf
 //         </button>
-//         <div id="divToPrint" style={{ display: 'none' }}>
+//         <div id="divToPrint">
 //           <div>
 //             <Resume print={true} />
 //           </div>

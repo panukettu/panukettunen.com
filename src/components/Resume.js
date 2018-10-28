@@ -9,7 +9,7 @@ const Resume = ({ print }) => (
   <div
     id="resume"
     style={{
-      fontSize: '14px',
+      fontSize: print ? '8px' : '14px',
       border: print ? 'none' : '1px solid black',
       padding: rhythm(1),
       boxShadow: print ? 'none' : '3px 3px 3px',
