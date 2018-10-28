@@ -51,6 +51,10 @@ class PortfolioIndex extends React.Component {
             React-ecosystem.
           </p>
           <p>
+            Apart from doing programming my interests lie in listening and
+            producing music, playing various computer games and skateboarding!
+          </p>
+          <p>
             You can check out my{' '}
             <a
               style={{
