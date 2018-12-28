@@ -1,7 +1,7 @@
 import React from 'react'
 import { rhythm } from '../utils/typography'
 
-import Header from './Header'
+import Header from './Header/Header'
 
 class Layout extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class Layout extends React.Component {
           maxWidth: rhythm(32),
           padding: `0px ${rhythm(1.5)} ${rhythm(3 / 4)}`,
           boxShadow: '3px 3px 3px',
-          minHeight: '100vmin',
+          minHeight: '100vh',
         }}
       >
         <Header location={location} />

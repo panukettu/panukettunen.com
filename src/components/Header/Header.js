@@ -1,9 +1,11 @@
 import React from 'react'
-import { NavLink } from './Links'
-import Title from './Title'
-import Icons from './Icons'
-import { rhythm } from '../utils/typography'
-import ScrollProvider from './ScrollProvider'
+import { NavLink } from '../Links'
+import Title from '../Title'
+import Icons from '../Icons'
+import { rhythm } from '../../utils/typography'
+import ScrollProvider from '../ScrollProvider'
+
+import './Header.css'
 
 const Header = ({ location }) => (
   <>
@@ -12,34 +14,29 @@ const Header = ({ location }) => (
       style={{
         position: 'sticky',
         top: '0px',
-        backgroundColor: 'white',
         opacity: 0.9,
         height: rhythm(1.425),
       }}
     >
-      <span
-        className="icon-title"
-        style={{
-          fontSize: '9',
-          lineHeight: '24px',
-          fontWeight: 'bold',
-          textDecoration: 'none',
-          cursor: 'pointer',
+      <ScrollProvider>
+        {({ scrollY }) => {
+          let scrolled = scrollY > 150
+          return (
+            <div
+              className={`icon-title toplink ${scrolled ? 'scrolled' : ''}`}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              panukettunen.com
+            </div>
+          )
         }}
-        onClick={() => window.scrollTo(0, 0)}
-      >
-        <ScrollProvider>
-          {({ scrollY }) => (scrollY > 150 ? '⏫ ' : '')}
-        </ScrollProvider>
-        panukettunen.com
-      </span>
+      </ScrollProvider>
     </div>
     <div
       style={{
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingRight: rhythm(2),
       }}
     >
       <Title
@@ -53,24 +50,16 @@ const Header = ({ location }) => (
           justifyContent: 'flex-end',
         }}
       >
-        <ul
-          style={{
-            listStyle: 'none',
-            display: 'flex',
-            flexDirection: 'column',
-            alignContent: 'center',
-            fontWeight: 'bold',
-            fontSize: '18px',
-          }}
-        >
+        <ul className="menu">
           <li>
             <NavLink
               to="/"
               style={{
                 textDecoration: 'none',
+                width: '100%',
               }}
             >
-              ⏮ index
+              index 🏠
             </NavLink>
           </li>
           <li>
@@ -80,7 +69,7 @@ const Header = ({ location }) => (
                 textDecoration: 'none',
               }}
             >
-              🐱💻 me
+              me 🐱‍👤
             </NavLink>
           </li>
         </ul>

@@ -1,0 +1,74 @@
+.toplink {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.07s all ease-in;
+}
+
+.scrolled::before {
+  content: '⏫ ';
+}
+
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px;
+  font-size: 20px !important;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu > li {
+  width: 125px;
+  text-align: end;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.27s background-color ease-in;
+}
+
+.menu > li > span {
+  display: block;
+  width: 115px !important;
+  height: 100%;
+}
+
+.menu > li > span::after {
+  display: block;
+  position: relative;
+  content: '';
+  border-top: 2px solid rgba(0, 230, 251, 0.5);
+  animation: wow 0.27s ease-in;
+}
+
+@keyframes wow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+.menu > li > a {
+  display: block;
+  width: 115px !important;
+  height: 100%;
+}
+
+.menu > li:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu > li:active {
+  background-color: rgba(0, 0, 0, 0.8);
+}

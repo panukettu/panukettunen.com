@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 
 class ScrollProvider extends React.Component {
   state = {
@@ -12,10 +13,13 @@ class ScrollProvider extends React.Component {
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.setScrollY)
+    window.removeEventListener('scroll', this.setScroll)
   }
 
-  setScroll = (scrollY, scrollX) => this.setState({ scrollY, scrollX })
+  setScroll = _.throttle(
+    (scrollY, scrollX) => this.setState({ scrollY, scrollX }),
+    100
+  )
 
   render() {
     return this.props.children({
@@ -24,5 +28,7 @@ class ScrollProvider extends React.Component {
     })
   }
 }
+
+function setScroll() {}
 
 export default ScrollProvider
