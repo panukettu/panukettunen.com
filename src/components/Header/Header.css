@@ -1,4 +1,11 @@
-.toplink {
+.scroll-container {
+  position: sticky;
+  top: 0px;
+  opacity: 0.9;
+  height: rhythm(1.425);
+}
+
+.scroll-link {
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -16,6 +23,18 @@
   color: white;
   padding: 2px;
   font-size: 20px !important;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .menu {

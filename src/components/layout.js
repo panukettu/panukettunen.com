@@ -13,7 +13,7 @@ class Layout extends React.Component {
           backgroundColor: 'white',
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: rhythm(32),
+          maxWidth: rhythm(28),
           padding: `0px ${rhythm(1.5)} ${rhythm(3 / 4)}`,
           boxShadow: '3px 3px 3px',
           minHeight: '100vh',

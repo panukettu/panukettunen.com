@@ -10,20 +10,13 @@ import './Header.css'
 const Header = ({ location }) => (
   <>
     <Icons />
-    <div
-      style={{
-        position: 'sticky',
-        top: '0px',
-        opacity: 0.9,
-        height: rhythm(1.425),
-      }}
-    >
+    <div className="scroll-container">
       <ScrollProvider>
         {({ scrollY }) => {
           let scrolled = scrollY > 150
           return (
             <div
-              className={`icon-title toplink ${scrolled ? 'scrolled' : ''}`}
+              className={`icon-title scroll-link ${scrolled ? 'scrolled' : ''}`}
               onClick={() => window.scrollTo(0, 0)}
             >
               panukettunen.com
@@ -32,31 +25,18 @@ const Header = ({ location }) => (
         }}
       </ScrollProvider>
     </div>
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      }}
-    >
+    <div className="title-container">
       <Title
         renderBig={location.pathname === '/' || location.pathname === '/me'}
         text={location.pathname}
       />
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-        }}
-      >
+      <div className="menu-container">
         <ul className="menu">
           <li>
             <NavLink
               to="/"
               style={{
                 textDecoration: 'none',
-                width: '100%',
               }}
             >
               index 🏠
