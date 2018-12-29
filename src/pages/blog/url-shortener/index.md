@@ -21,7 +21,7 @@ Create a project
 
 #### Step 2
 
-Create a `_redirects` file like this in the project root
+**Create** a `_redirects` file like this in the project root
 [(**read more**)](https://www.netlify.com/docs/redirects/)
 
 ```
@@ -29,11 +29,13 @@ Create a `_redirects` file like this in the project root
 /*      http://www.google.com
 ```
 
+_/_ is the root url redirect\*
+
 <br>
 
 #### Step 3
 
-Create a repository in [GitHub](https://github.com).
+**Create** a repository in [GitHub](https://github.com).
 
 Commit and push:
 
@@ -59,9 +61,9 @@ There's really no need for configurations so just click the
 
 You should see your site live soon.
 
-Browse to https://your-netlify-url.netlify.com/gh and you should see GitHub!
+Browse to http://your-netlify-url.netlify.com/gh and you should see GitHub!
 
-Custom domain can be set up by clicking the **Domain settings** button.
+**Custom domain** can be set up by clicking the **Domain settings** button.
 
 Scroll down and click on the **Add custom domain** button and write your desired domain on the input.
 
@@ -92,11 +94,22 @@ Add the following to your `package.json`:
 After this we can run the local dependency like: `npm run shorten https://google.com googel`  
 It's nice but we'd rather do it globally
 
-Easiest way to accomplish this is with a windows box to install [Cmder](http://cmder.net/) as your goto command-line tool. I recommend using Cmder over cmd.exe anyways.
+Easiest way to accomplish this is with a **windows** box to install [Cmder](http://cmder.net/) as your goto command-line tool. I recommend using **Cmder** over cmd.exe anyways.
 You can then edit the `user-alias.cmd` file in your `/path/to/cmder/config/` folder.
 
 Add the following in the file: `shorten=cmd /c "cd /d {path-to-local-repo} && npm run shorten $1 $2"`
 
 **There we go!**
 
-_I did not come up with this! Credits to [Kent C. Dodds and his netlify-shortener](https://github.com/kentcdodds/netlify-shortener)_
+Pop up a command-line and type `shorten http://www.google.com google`
+
+It should:
+
+1. Insert the line in `_redirects` file.
+2. Make a commit and push it to GitHub
+
+**Netlify** will automatically start building it from there.
+
+Thanks for reading!
+
+_I did not come up with this! Credits to [Kent C. Dodds with the netlify-shortener](https://github.com/kentcdodds/netlify-shortener)_
