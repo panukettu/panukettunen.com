@@ -33,10 +33,18 @@
   },
   {
     "id": 4,
-    "jobTitle": "Developer (corresponding)",
+    "jobTitle": "Senior Developer",
     "employee": "Mtech Digital Solutions Oy",
     "yearStart": "2018",
-    "yearEnd": "Current",
+    "yearEnd": "2019",
     "jobDescription": "Added responsibility."
+  },
+  {
+    "id": 4,
+    "jobTitle": "Web Developer",
+    "employee": "Alma Media",
+    "yearStart": "2019",
+    "yearEnd": "Current",
+    "jobDescription": "Front end web development."
   }
 ]

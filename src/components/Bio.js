@@ -15,6 +15,7 @@ class Bio extends React.Component {
         style={{
           display: 'flex',
           marginBottom: rhythm(2.5),
+          padding: rhythm(1 / 2),
         }}
       >
         <img
@@ -30,10 +31,10 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          A software developer from Helsinki, Finland, working with React and
-          AngularJS. Apart from code you'll find me playing games, exercising or
-          making music. Currently working for{' '}
-          <a href="http://mtech.fi">Mtech Digital Solutions</a>
+          A software developer from Helsinki, Finland. Working with JS. <br/>You can also find me playing games, exercising or
+          making music. <br/>
+          Currently working as Web Developer for{' '}
+          <a href="https://almamedia.fi">Alma Media</a>.
           <br />
           <br />
           <EmojiLink emoji="⏩" to="me" style={{ textDecoration: 'none' }}>

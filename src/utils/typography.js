@@ -1,7 +1,7 @@
 import Typography from 'typography'
 import bootstrapTheme from 'typography-theme-bootstrap'
 
-bootstrapTheme.bodyFontFamily = ['Consolas']
+bootstrapTheme.bodyFontFamily = ['Inconsolata', 'Skia', 'Consolas',]
 
 bootstrapTheme.overrideThemeStyles = () => ({
   body: {
