@@ -42,9 +42,15 @@ class PortfolioIndex extends React.Component {
             for the web is what I like and should be doing.
           </p>
           <p>
-            I got accepted as an intern to my current company in 2014 where I
-            have been working since doing closed source stuff for various
-            clients.
+            I got accepted as an intern in{' '}
+            <a href="https://www.mtech.fi">Mtech Digital Solutions</a> back in
+            2014.{' '}
+          </p>
+          <p>
+            I worked there for five years as a full stack developer doing work
+            mostly with ASP.NET MVC and AngularJS. Looking for new challenges I
+            got accepted working as a Web Developer in{' '}
+            <a href="https://www.almamedia.fi">Alma Media</a> in 2019.
           </p>
           <p>
             I enjoy working with JavaScript. My focus is mostly on the
