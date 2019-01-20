@@ -31,9 +31,9 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          A software developer from Helsinki, Finland. Working with JS. <br/>You can also find me playing games, exercising or
-          making music. <br/>
-          Currently working as Web Developer for{' '}
+          A software developer from Helsinki, Finland. Working with JS. You can
+          also find me playing games, exercising or making music. Currently
+          working as Web Developer for{' '}
           <a href="https://almamedia.fi">Alma Media</a>.
           <br />
           <br />
