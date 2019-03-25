@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'pk',
+    title: 'Panu Kettunen - Web Developer',
     author: 'panu kettunen',
-    description: 'portfolio/cv/blog/ platform for myself.',
-    siteUrl: 'https://panukettunen.com',
+    description: 'My personal website with a blog',
+    siteUrl: 'https://www.panukettunen.com',
   },
   pathPrefix: '/blog',
   plugins: [
