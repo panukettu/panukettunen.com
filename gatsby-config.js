@@ -7,6 +7,7 @@ module.exports = {
   },
   pathPrefix: '/blog',
   plugins: [
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -87,7 +88,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `panu's great website`,
+        name: `Panu Kettunen - Web Developer`,
         short_name: `panukettunen.com`,
         start_url: `/`,
         background_color: `#ffffff`,
