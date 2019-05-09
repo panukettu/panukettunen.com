@@ -12,7 +12,7 @@
     "id": 1,
     "title": "Development skills",
     "skills": [
-      "Languages: C#, SQL, Javascript (ES2018, AngularJS, React, Webpack)",
+      "Languages: C#, SQL, HTML, CSS, Javascript (ES2018, AngularJS, React, Webpack)",
       "Other stuff: REST, Scrum",
       "What's next: Redux, GraphQL, Elm"
     ]
