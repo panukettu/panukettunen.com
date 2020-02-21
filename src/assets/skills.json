@@ -3,17 +3,17 @@
     "id": 0,
     "title": "General",
     "skills": [
-      "Great English skills",
-      "Good team player with a positive attitude",
-      "Constantly learning about new stuff"
+      "Great in verbal and written English.",
+      "Valuable team member with a positive mindset.",
+      "Constantly learning about new stuff."
     ]
   },
   {
     "id": 1,
     "title": "Development skills",
     "skills": [
-      "Languages: C#, SQL, HTML, CSS, Javascript (ES2018, AngularJS, React, Webpack)",
-      "Other stuff: REST, Scrum",
+      "C#, SQL, HTML, CSS, TypeScript / Javascript (Node.js, ES2020, React, React Native, Redux, Websockets, GraphQL, Webpack, AngularJS)",
+      "Other stuff: Amazon Web Services, REST, Scrum, Git, Jira, Microservices",
       "What's next: Redux, GraphQL, Elm"
     ]
   }
