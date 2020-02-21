@@ -29,7 +29,7 @@
     "employee": "Mtech Digital Solutions Oy",
     "yearStart": "2014",
     "yearEnd": "2018",
-    "jobDescription": "Maintaining a large scale application with MSSQL, ASP.NET MVC and AngularJS. Designed and created a WebApi and a lite progressive web app version of the main application with AngularJS which is targeted towards mobile devices. Also did many smaller mobile side-projects with AngularJS."
+    "jobDescription": "Involved mainly in the maintenance of a large scale application using the Microsoft stack (MS-SQL, .NET MVC) and AngularJS. Designed and created a rest api and a mobile version of the application with Ionic Framework. During my stay I also did many smaller side-projects targeted towards mobile."
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "employee": "Mtech Digital Solutions Oy",
     "yearStart": "2018",
     "yearEnd": "2019",
-    "jobDescription": "Added responsibility."
+    "jobDescription": "Leading the mobile development side of an application."
   },
   {
     "id": 4,
@@ -45,6 +45,6 @@
     "employee": "Alma Media",
     "yearStart": "2019",
     "yearEnd": "Current",
-    "jobDescription": "Front end web development."
+    "jobDescription": "Maintaining and developing the finnish news service Iltalehti."
   }
 ]

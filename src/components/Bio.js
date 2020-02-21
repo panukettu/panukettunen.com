@@ -4,7 +4,7 @@ import React from 'react'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import MEITSI from '../assets/meitsi2.png'
+import MEITSI from '../assets/me1.jpg'
 import { rhythm } from '../utils/typography'
 import { EmojiLink } from './Links'
 
@@ -24,17 +24,16 @@ class Bio extends React.Component {
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
-            width: rhythm(3.25),
-            height: rhythm(4.75),
+            width: '17%',
+            height: '17%',
             borderRadius: '1px 25px',
             boxShadow: '1px 1px 3px black',
           }}
         />
         <p>
           A software developer from Helsinki, Finland. Working with JS. You can
-          also find me playing games, exercising or making music. I am
-          working as a Web Developer for{' '}
-          <a href="https://almamedia.fi">Alma Media</a>.
+          also find me playing games, exercising or making music. I am working
+          as a Web Developer for <a href="https://almamedia.fi">Alma Media</a>.
           <br />
           <br />
           <EmojiLink emoji="⏩" to="me" style={{ textDecoration: 'none' }}>

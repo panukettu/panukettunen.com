@@ -53,8 +53,14 @@ class PortfolioIndex extends React.Component {
             <a href="https://www.almamedia.fi">Alma Media</a> in 2019.
           </p>
           <p>
-            I enjoy working with JavaScript. My focus is mostly on the
-            React-ecosystem.
+            Working for Alma Media has been marvelous - all the technologies I
+            have been enthusiastic about has been put to use and working with a
+            website which is one of the most popular in Finland does not get
+            boring.
+          </p>
+          <p>
+            I enjoy working with web technologies, Node.js (why not Deno aswell)
+            and TypeScript are really my comfort zone.
           </p>
           <p>
             Apart from doing programming my interests lie in listening and
