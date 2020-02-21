@@ -22,10 +22,10 @@ class Bio extends React.Component {
           src={MEITSI}
           alt={`Me`}
           style={{
-            marginRight: rhythm(1 / 2),
+            marginRight: rhythm(2 / 3),
             marginBottom: 0,
-            width: '17%',
-            height: '17%',
+            width: rhythm(5),
+            height: rhythm(5),
             borderRadius: '1px 25px',
             boxShadow: '1px 1px 3px black',
           }}
